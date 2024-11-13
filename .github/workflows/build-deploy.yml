@@ -30,8 +30,8 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.4.3
         with:
-          name: sector-umbra.net-dist.tar.gz
-          path: sector-umbra.net-dist.tar.g
+          name: Dist Package
+          path: sector-umbra.net-dist.tar.gz
           if-no-files-found: error
           retention-days: 1
           overwrite: true
