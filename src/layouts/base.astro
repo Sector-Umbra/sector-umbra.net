@@ -1,0 +1,24 @@
+---
+import '../styles/base.css';
+import '../styles/layout.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="header">
+        <img src="/logo_small.png" alt="Sector Umbra logo" class="logo">
+        <h1 class="title"><a href="/">Sector Umbra</a></h1>
+    </div>
+   
+    <div id="content">
+        <slot />
+    </div>
+    <div id="footer">
+        <p>(c) Sector Umbra 2024 - <a href="/privacy-policy">Privacy Policy</a></p>
+    </div>
+  </body>
+</html>
