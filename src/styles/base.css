@@ -78,3 +78,16 @@ hr {
 strong {
     font-weight: bold;
 }
+
+abbr::after {
+    content: " (?)"; /* Add a space and a question mark */
+    font-size: 0.9em; /* Adjust size if necessary */
+    color: #555; /* Set the color of the question mark */
+}
+  
+abbr {
+    text-decoration: none; /* Remove the default underline if desired */
+    border-bottom: 1px dotted #ccc; /* Optional: Add a dotted underline for better emphasis */
+    cursor: help; /* Change the cursor to indicate it's for clarification */
+    padding-bottom: 2px;
+}

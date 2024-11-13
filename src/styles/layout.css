@@ -37,10 +37,33 @@
         padding-bottom: 0.5rem;
     }
     h2 {
-        padding-left: 10px;
+        margin-left: 10px;
     }
     p {
-        padding-left: 20px;
+        margin-left: 20px;
+    }
+    table {
+        margin-left: 40px;
+        text-align: center;
+
+        .left {
+            text-align: left;
+        }
+
+        th, td {
+            padding: 5px;
+            min-width: 3rem;
+        }
+        tr {
+            min-height: 3rem;
+        }
+    }
+
+    .warn {
+        border-style: solid;
+        border-radius: 10px;
+        border-color: #ffc107;
+        padding: 10px;
     }
 }
 
