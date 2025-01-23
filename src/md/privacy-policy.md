@@ -1,4 +1,4 @@
-Policy last updated: 13th of November, 2024
+Policy last updated: 23rd of January, 2025
 
 A notice will be made if this document is changed.
 
@@ -50,7 +50,6 @@ We consider the purposes listed above to be lawful purposes for processing perso
 |---------------|--------|--------|--------|--------|--------|--------|
 | <div class="left">SS14 Account names</div> | ✅ | ✅ | | ✅ | ✅ | |
 | <div class="left">SS14 Account ID's</div> | ✅ | ✅ | | ✅ | | |
-| <div class="left">SS14 Account e-mail addresses</div> | | | | ✅ | | |
 | <div class="left"><abbr title="An automatically generated logs system by the SS14 codebase, for the purpose of allowing admins to investigate rulebreaking behavior.">Admin logs</abbr></div> | | ✅ | | | | |
 | <div class="left"><abbr title="Essentially a limited version of admin logs, showing only whether or not you did or did not participate in a SCHEDULED round.">Round participation</abbr></div> | | <abbr title="Not directly used, but indirectly processed as Admin Logs."></abbr>| | | ✅ | |
 | <div class="left"><abbr title="Includes both IPv4 and IPv6 addresses used when connecting to our services.">Internet Protocol addresses</abbr></div> | ✅ | ✅ | ✅ | ✅ | | |
@@ -63,14 +62,16 @@ We consider the purposes listed above to be lawful purposes for processing perso
 
 <br>
 
-| **Person / Role** | **SS14 Name** | **SS14 ID** | **SS14 E-mail** | **ALogs** | **Round participation** | **IP's** | **HWID's** | **Patreon info** |
-|-------------------|--------|--------|--------|--------|--------|--------|--------|--------|
-| <div class="left"><abbr title="This is the server host, and for this reason they have access to all processed information at all times.">TsjipTsjip</abbr></div> | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| <div class="left"><abbr title="Access is available at any time.">Project Managers</abbr></div> | ✅ | ✅ | | ✅ | ✅ | | | |
-| <div class="left"><abbr title="Includes Trial Game Masters. Access is only available while the GM is connected to the server.">Game Masters</abbr></div> | ✅ | ✅ | | ✅ | ✅ | | | |
-| <div class="left"><abbr title="Only while making use of the server and only with relation to data subjects actively connected. In the case of historical data (replays), only when this condition would have been true at the time.">Players</abbr></div> | ✅ | <abbr title="While no direct access is given, an accurate and current SS14 name can be uniquely related to an SS14 ID by means of querying the authentication server not operated by Sector Umbra."></abbr> | | | ✅ | | | |
+| **Person / Role** | **SS14 Name** | **SS14 ID** | **ALogs** | **Round participation** | **IP's** | **HWID's** | **Patreon info** |
+|-------------------|---------------|-------------|-----------|-------------------------|----------|------------|------------------|
+| <div class="left"><abbr title="This is the server host, and for this reason they have access to all processed information at all times.">TsjipTsjip</abbr></div> | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| <div class="left"><abbr title="Access is available at any time.">Project Managers</abbr></div> | ✅ | ✅ | ✅ | ✅ | <abbr title="This information is only accessed with TsjipTsjip's permission and supervision.">✅</abbr> | <abbr title="This information is only accessed with TsjipTsjip's permission and supervision.">✅</abbr> | | |
+| <div class="left"><abbr title="Includes Trial Game Masters. Access is only available while the GM is connected to the server.">Game Masters</abbr></div> | ✅ | ✅ | ✅ | ✅ | | | |
+| <div class="left"><abbr title="Only while making use of the server and only with relation to data subjects actively connected. In the case of historical data (replays), only when this condition would have been true at the time.">Players</abbr></div> | ✅ | <abbr title="While no direct access is given, an accurate and current SS14 name can be uniquely related to an SS14 ID by means of querying the authentication server not operated by Sector Umbra."></abbr> | | ✅ | | | |
 
-<br>
+## IPIntel API
+
+As of the 24th of January 2025, the Sector Umbra game server codebase has the ability to perform automatic IPIntel checking with IP addresses of connecting clients. Sector Umbra does not use this functionality, and connecting IP addresses are explicitly not shared with this third party.
 
 # How long is this data retained after processing?
 
