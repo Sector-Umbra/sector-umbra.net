@@ -9,6 +9,5 @@ It is not possible to sign up to become a member at this time.
 - [Privacy Policy](/privacy-policy)
 - [GitHub repository](https://github.com/Sector-Umbra/Sector-Umbra)
 - [Wiki](https://wiki.sector-umbra.net/)
-- [Server rules (Wiki)](https://wiki.sector-umbra.net/en/server-rules)
-- [Attributions (Wiki)](https://wiki.sector-umbra.net/en/attributions)
+- [Server rules (Wiki)](https://wiki.sector-umbra.net/books/start-here-sector-umbra/page/server-rules)
 - [Patreon](https://patreon.com/SectorUmbra)
