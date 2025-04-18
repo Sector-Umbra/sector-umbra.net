@@ -1,0 +1,79 @@
+---
+// UserReplays.astro
+---
+
+<div id="replays-container">
+  <!-- First row -->
+  <h1>Your replays</h1>
+
+  <div id="nologin" style="display: flex; justify-content: center;">
+    <p>
+      You must <a href="/auth/login">log in</a> to view your available replays.
+    </p>
+  </div>
+  <div id="login" style="display: none;">
+    <!-- InnerHTML overwriting goes here -->
+     <button id="reload-replays" style="float: right;">Refresh</button>
+     <div id="replays-table">
+
+     </div>
+  </div>
+</div>
+
+<script>
+  async function reloadReplays() {
+    const noLoginElement = document.getElementById("nologin");
+    const loginElement = document.getElementById("login");
+    const tableElement = document.getElementById("replays-table");
+
+    // Exit if any return null.
+    if (noLoginElement === null || loginElement === null || tableElement === null) return;
+
+    // Fetch replay list.
+    const replaysResponse = await fetch('/api/me', {
+      credentials: "same-origin"
+    });
+
+    // If 200, switch to Login view.
+    if (replaysResponse.status === 200) {
+      var replaysTableHTML = "";
+
+      const data = await replaysResponse.json();
+
+      replaysTableHTML += `<p>Welcome, ${data.name}!${data.gm_access ? " (Game Master)" : ""}</p>`
+
+
+      const replays: Map<number, string> = data.replays || {};
+
+      if (Object.keys(replays).length === 0) {
+        replaysTableHTML += "<p>No replays found.</p>"
+      } else {
+        replaysTableHTML += "<table><tr><th>Round ID</th><th>Round date</th><th>Download link</th></tr>"
+
+        Object.entries(replays).forEach(([roundId, filePath]) => {
+          const filename = filePath.split('/').pop() || '';
+          const date = filename.match(/[0-9]{4}-[0-9]{2}-[0-9]{2}/);
+
+          replaysTableHTML += `<tr><td>${roundId}</td><td>${date}</td><td><a href="/replay/${filePath}">Download</a></tr>`
+        })
+
+        replaysTableHTML += "</table>"
+      }
+      
+      
+      noLoginElement.style.display = "none";
+      loginElement.style.display = "block";
+      tableElement.innerHTML = replaysTableHTML;
+    } else { // If not, switch to NoLogin view.
+      noLoginElement.style.display = "block";
+      loginElement.style.display = "none";
+      tableElement.innerHTML = "";
+    }
+  }
+
+  const button = document.getElementById("reload-replays");
+  if (button != null) {
+    button.onclick = reloadReplays;
+  }
+  reloadReplays();
+</script>
